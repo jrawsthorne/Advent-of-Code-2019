@@ -9,6 +9,7 @@ pub fn main() {
     println!("sum={}", sum);
 }
 
+#[allow(dead_code)]
 fn fuel(module_mass: isize) -> isize {
     module_mass / 3 - 2
 }
