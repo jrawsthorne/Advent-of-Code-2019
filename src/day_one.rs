@@ -1,6 +1,15 @@
 use std::fs::read_to_string;
 
-pub fn main() {
+pub fn part_one() {
+    let sum = read_to_string("./src/data/day_one.txt")
+        .expect("couldn't read input file")
+        .lines()
+        .map(|l| fuel(l.parse().expect("couldn't parse line as int")))
+        .fold(0, |total, x| total + x);
+    println!("sum={}", sum);
+}
+
+pub fn part_two() {
     let sum = read_to_string("./src/data/day_one.txt")
         .expect("couldn't read input file")
         .lines()
@@ -9,7 +18,6 @@ pub fn main() {
     println!("sum={}", sum);
 }
 
-#[allow(dead_code)]
 fn fuel(module_mass: isize) -> isize {
     module_mass / 3 - 2
 }
