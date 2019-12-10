@@ -1,4 +1,5 @@
 mod day_one;
+mod day_three;
 mod day_two;
 
 enum Part {
@@ -29,6 +30,10 @@ fn main() {
         2 => match part {
             Part::One => day_two::part_one(),
             Part::Two => day_two::part_two(),
+        },
+        3 => match part {
+            Part::One => day_three::part_one(),
+            Part::Two => day_three::part_two(),
         },
         _ => panic!("Day not found"),
     };
